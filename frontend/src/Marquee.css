@@ -1,0 +1,20 @@
+.marquee {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: marquee 23s linear infinite;
+}
+
+.marquee:hover {
+    animation-play-state: paused;
+    /* Menghentikan animasi saat di-hover */
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
