@@ -2,16 +2,23 @@
 // useState: Hook untuk mengelola state dalam komponen fungsional.
 // useEffect: Hook untuk mengelola efek samping, seperti fetching data atau mengatur listener.
 import React, { useState, useEffect } from "react";
+
+
 // Outlet: Komponen dari react-router-dom yang digunakan sebagai placeholder untuk merender komponen anak sesuai rute saat ini.
 // useLocation: Hook yang memberikan akses ke lokasi saat ini, berguna untuk mendapatkan path URL yang aktif.
 import { Outlet, useLocation, Link } from "react-router-dom";
+
+
 // Navbar: Komponen navigasi di bagian atas aplikasi, biasanya memuat menu atau tautan penting.
 // Footer: Komponen di bagian bawah aplikasi, biasanya memuat informasi tambahan seperti hak cipta atau tautan sosial.
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+
 // Mengimpor stylesheet untuk react-responsive-carousel, library yang digunakan untuk membuat carousel (slider) responsif.
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { FaUserCircle } from "react-icons/fa";
+
+
 // format: Fungsi dari library date-fns untuk memformat tanggal ke dalam string.
 // id: Lokalisasi bahasa Indonesia untuk date-fns, memungkinkan format tanggal sesuai dengan konvensi Indonesia.
 import { format } from "date-fns";
@@ -20,9 +27,11 @@ import { id } from "date-fns/locale";
 // Komponen ini adalah functional component menggunakan arrow function.
 // Komponen berfungsi untuk halaman Home, yang mungkin menjadi halaman utama aplikasi.
 const Home = () => {
+  
   // products: Menyimpan daftar produk (diambil dari API).
   // setProducts: Fungsi untuk memperbarui daftar produk.
   const [products, setProducts] = useState([]);
+  
   // filteredProducts: Menyimpan produk yang sudah difilter, misalnya berdasarkan pencarian atau kategori.
   // setFilteredProducts: Fungsi untuk memperbarui daftar produk yang telah difilter.
   const [filteredProducts, setFilteredProducts] = useState([]);
